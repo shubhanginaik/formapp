@@ -85,6 +85,7 @@ input[type="submit"]{
   text-indent: 50px;
   
 }
+
 .view{
   margin-top: 1rem;
 }
@@ -100,7 +101,7 @@ input[type="submit"]{
 .view strong{
   font-family: 'Times New Roman', Times, serif;
 }
-
+/******************popup component***********/
 .overlay{
   position: fixed;
   left: 0;
@@ -125,9 +126,19 @@ input[type="submit"]{
 }
 .popup p{
   padding: 1rem 0;
+  text-align: left;
+  padding-left: 320px;
 }
 p span{
   font-family: 'Caveat',cursive;
   font-size: large;
   text-align: left;
+  margin-left: 25px;
+}
+button{
+  width: 250px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsla(118, 85%, 43%, 0.829);
 }

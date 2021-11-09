@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,123 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+*{
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+  background-color: white;
+  margin-top: 5rem;
+  position: relative;
+  font-family: 'Roboto' sans-serif;
+}
+.secondary {
+  border: darkolivegreen;
+  color: darkolivegreen;
+  background: transparent;
+}
+/**********Form component********/
+form{
+  padding: 2rem;
+  background: rgb(11, 57, 95);
+  color: white;
+ 
+  
+}
+input,textarea,select{
+  width: 250px;
+  height: 50px;
+  padding: 0.8rem;
+  border-radius: 5px;
+  margin-bottom: 7px;
+  background: #f4f4f4;
+}
+form select{
+  width:250px;
+  height: 50px;
+  border-radius: 5px;
+  align-self: right;
+}
+
+form label{
+  width: 150px;
+  display: inline-block;
+}
+form div {
+  margin: 1rem 0;
+}
+input[type="submit"]{
+  
+  width:250px;
+  height: 50px;
+  padding: 0.8rem;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  border:none;
+}
+input[type="submit"]{
+  margin-top: 2rem;
+  margin-left: 150px;
+}
+/****************View component**************/
+.notepad {
+  margin-top: 1rem;
+  padding: 2rem;
+}
+.view p{
+  font-family: 'Caveat', cursive;
+  font-size: large;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px dotted rgb(145, 145, 145);
+  text-indent: 50px;
+  
+}
+.view{
+  margin-top: 1rem;
+}
+.view::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  border-left: 1px solid rgb(255, 77, 0);
+  border-right: 1px solid rgb(255, 77, 0);
+  position: absolute;
+  left: 35
+}
+.view strong{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.overlay{
+  position: fixed;
+  left: 0;
+  top:0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(51,51,51,.9);
+}
+.popup{
+  position: relative;
+  left:0;
+  top:0;
+  height: 50%;
+  width: 50%;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 0 5px #333;
+  margin: 0 auto;
+}
+.popup p{
+  padding: 1rem 0;
+}
+p span{
+  font-family: 'Caveat',cursive;
+  font-size: large;
+  text-align: left;
 }

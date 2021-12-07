@@ -6,9 +6,9 @@ const View = ({firstname,lastname,phonenumber,role,message}) =>{
     
         return (
             <>
-            <div className="notepad">
-            <h2>This is your input</h2>
             <div className="view">
+            <h2>This is your input</h2>
+            <div className="notepad">
                 <p><strong>FirstName:</strong>{firstname}</p>
                 <p><strong>LastName:</strong>{lastname}</p>
                 <p><strong>Phonenumber:</strong>{phonenumber}</p>

@@ -11,8 +11,8 @@ class App extends Component {
       inputData:{
     firstname: "",
     lastname: "",
-    phone: "",
-    role: "Other",
+    phonenumber: "",
+    role: "",
     message:"",
       },
     showPopup:false,
@@ -37,6 +37,15 @@ popupHandler = (event) => {
   event.preventDefault();
   this.setState({ showPopup: true, });
 };
+postHandler =(e)=> {
+  axios
+  .post('http://localhost:3001/notes',this.state.inputData)
+  .then((res)=>{ console.log(res)
+  this.setState({showPopup:false});
+  window.location.reload();
+})
+  .catch((error)=> console.log(error));
+} 
 
 
   render() {
@@ -48,9 +57,11 @@ popupHandler = (event) => {
           <Form change={this.inputHandler} submit={this.popupHandler}/>
           <View {...this.state.inputData}/> 
           </div>
-          {this.state.showPopup && <Popup {...this.state.inputData}/>}
+          {this.state.showPopup && (
+          <Popup {...this.state.inputData} post={this.postHandler}/>
+          )}
           {this.state.data.map((note)=>(
-          <Notes {...note} />
+          <Notes {...note}key={note.id} />
           ))}
           
       </div>

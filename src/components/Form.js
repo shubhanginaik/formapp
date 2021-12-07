@@ -44,9 +44,11 @@ const form = ({submit,change}) => {
             <select 
             name="role" 
             id="role" 
-            onChange={change}>
+            onChange={change}
+            required>
+                <option value="">Choose a role</option>
                 <option value="Teacher">Teacher</option>
-                <option value="Student">Student</option>
+                <option value="Student" >Student</option>
                 <option value="Other">Other</option>
             </select>
             </div>

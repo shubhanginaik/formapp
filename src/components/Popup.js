@@ -5,7 +5,7 @@ import React from 'react';
 const CloseHandler=()=>{
     window.location.reload();
 }
-const Popup = ({firstname,lastname,phonenumber,message,role}) => {
+const Popup = ({firstname,lastname,phonenumber,message,role,post}) => {
     
     return (
         <div className="overlay">
@@ -22,8 +22,8 @@ const Popup = ({firstname,lastname,phonenumber,message,role}) => {
         </p>
         <p> Role:<span>{role}</span>
         </p>
-        <button onClick={CloseHandler}>Yes,I am sure</button>
-        <button className="secondary">Nope,don't wan't to post it</button>
+        <button onClick={post}>Yes,I am sure</button>
+        <button className="secondary" onClick={CloseHandler}>Nope,don't wan't to post it</button>
         </div>
       </div>
       </div>

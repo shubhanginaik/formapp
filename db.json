@@ -1,0 +1,28 @@
+{
+    "notes":[
+        {
+            "id":1,
+            "firstname":"Shubhangi",
+            "lastname":"Naik",
+            "phonenumber":"0556362345",
+            "role":"student",
+            "message":"some realy important"
+        },
+        {
+            "id":2,
+            "firstname":"Margit",
+            "lastname":"Tennosar",
+            "phonenumber":"64447724453",
+            "role":"teacher",
+            "message":"some realy important"
+        },
+        {
+            "id":3,
+            "firstname":"Amrita",
+            "lastname":"Abs",
+            "phonenumber":"3626462345",
+            "role":"student",
+            "message":"some realy important"
+        }
+    ]
+}

@@ -2,19 +2,35 @@ import React, { Component } from 'react';
 import Form from './components/Form';
 import View from './components/View';
 import Popup from './components/Popup'
+import Notes from './components/Notes'
+
+import axios from 'axios';
 
 class App extends Component {
     state = {
+      inputData:{
     firstname: "",
     lastname: "",
     phone: "",
     role: "Other",
     message:"",
-    showPopup:false
-}
-handler = (e) =>{
+      },
+    showPopup:false,
+    data:[],
+};
+
+componentDidMount(){
+  axios.get("http://localhost:3001/notes")
+  .then((res) => {this.setState({data: res.data});
+  console.log(res);
+  console.log(res.data);
+});
+};
+
+
+inputHandler = (e) =>{
   this.setState({
-      [e.target.name]: e.target.value,
+    inputData:{...this.state.inputData,[e.target.name]: e.target.value}
   });
 };
 popupHandler = (event) => {
@@ -24,19 +40,19 @@ popupHandler = (event) => {
 
 
   render() {
-    const props={
-      first:this.state.firstname,
-      last:this.state.lastname,
-      phone:this.state.phone,
-      role:this.state.role,
-      message:this.state.message,
-    };
+   
     return (
       
       <div>
-          <Form change={this.handler} submit={this.popupHandler}/>
-          <View {...props}/> 
-          {this.state.showPopup && <Popup {...props}/>}
+        <div className="form-area"> 
+          <Form change={this.inputHandler} submit={this.popupHandler}/>
+          <View {...this.state.inputData}/> 
+          </div>
+          {this.state.showPopup && <Popup {...this.state.inputData}/>}
+          {this.state.data.map((note)=>(
+          <Notes {...note} />
+          ))}
+          
       </div>
     );
   }

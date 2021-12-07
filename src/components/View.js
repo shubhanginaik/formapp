@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const View = (props) =>{
+const View = ({firstname,lastname,phonenumber,role,message}) =>{
     
     
         return (
@@ -9,11 +9,11 @@ const View = (props) =>{
             <div className="notepad">
             <h2>This is your input</h2>
             <div className="view">
-                <p><strong>FirstName:</strong>{props.first}</p>
-                <p><strong>LastName:</strong>{props.last}</p>
-                <p><strong>Phone no:</strong>{props.phone}</p>
-                <p><strong>Role:</strong>{props.role}</p>
-                <p><strong>Message:</strong>{props.message}</p>
+                <p><strong>FirstName:</strong>{firstname}</p>
+                <p><strong>LastName:</strong>{lastname}</p>
+                <p><strong>Phonenumber:</strong>{phonenumber}</p>
+                <p><strong>Role:</strong>{role}</p>
+                <p><strong>Message:</strong>{message}</p>
                 </div>
             </div>
             </>

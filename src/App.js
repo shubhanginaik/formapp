@@ -3,9 +3,7 @@ import Form from './components/Form';
 import View from './components/View';
 import Popup from './components/Popup'
 import Notes from './components/Notes'
-
 import axios from 'axios';
-
 class App extends Component {
     state = {
       inputData:{
@@ -19,6 +17,7 @@ class App extends Component {
     data:[],
 };
 
+// we have created a dummy server
 componentDidMount(){
   axios.get("http://localhost:3001/notes")
   .then((res) => {this.setState({data: res.data});
@@ -26,7 +25,6 @@ componentDidMount(){
   console.log(res.data);
 });
 };
-
 
 inputHandler = (e) =>{
   this.setState({
@@ -47,11 +45,8 @@ postHandler =(e)=> {
   .catch((error)=> console.log(error));
 } 
 
-
   render() {
-   
     return (
-      
       <div>
         <div className="form-area"> 
           <Form change={this.inputHandler} submit={this.popupHandler}/>
@@ -62,8 +57,7 @@ postHandler =(e)=> {
           )}
           {this.state.data.map((note)=>(
           <Notes {...note}key={note.id} />
-          ))}
-          
+          ))}  
       </div>
     );
   }

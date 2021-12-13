@@ -7,7 +7,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -22,11 +21,7 @@ body{
   position: relative;
   font-family: 'Roboto' sans-serif;
 }
-.secondary {
-  border: darkolivegreen;
-  color: darkolivegreen;
-  background: transparent;
-}
+
 /**********Form component********/
 form{
   padding: 2rem;
@@ -40,7 +35,12 @@ input,textarea,select{
   border-radius: 5px;
   margin-bottom: 7px;
   background: #f4f4f4;
+  font-size: 1rem;
 }
+textarea{
+  height: 80px;
+}
+
 form select{
   width:250px;
   height: 50px;
@@ -142,6 +142,19 @@ button{
   border: none;
   border-radius: 5px;
   background-color: hsla(118, 85%, 43%, 0.829);
+  margin: 5px;
+  cursor: pointer;
+}
+button:hover{
+  background-color:hsla(118, 76%, 55%, 0.829);
+}
+.secondary {
+  border: darkolivegreen;
+  color: darkolivegreen;
+  background: transparent;
+}
+.secondary:hover{
+background-color: rgb(238, 180, 180);
 }
 .form-area{
   display: flex;

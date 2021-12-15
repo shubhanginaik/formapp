@@ -4,7 +4,7 @@ const Notes = ({firstname,lastname,phonenumber,role,message}) => {
     return (
         <div>
             
-            <div>
+            <div className="notes">
             <p>
                 { firstname } { lastname } | - <em> {role}</em> |{ phonenumber } | <strong> { message } </strong>
              </p>

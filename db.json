@@ -25,30 +25,6 @@
       "message": "some realy important"
     },
     {
-      "firstname": "test",
-      "lastname": "test",
-      "role": "Student",
-      "message": "hi",
-      "phonenumber": "64t24724y72",
-      "id": 4
-    },
-    {
-      "firstname": "test2",
-      "lastname": "test2",
-      "phonenumber": "1111111111",
-      "role": "Other",
-      "message": "hello",
-      "id": 5
-    },
-    {
-      "firstname": "Shubhangi",
-      "lastname": "Naik",
-      "phonenumber": "+3584037796242",
-      "role": "Student",
-      "message": "tesing",
-      "id": 6
-    },
-    {
       "firstname": "Raj",
       "lastname": "Kumar",
       "phonenumber": "5747257472",
@@ -63,6 +39,14 @@
       "role": "Student",
       "message": "hi,how are you",
       "id": 8
+    },
+    {
+      "firstname": "Margit",
+      "lastname": "gshsh",
+      "phonenumber": "5363763",
+      "role": "Teacher",
+      "message": "hgfjwhfgjw",
+      "id": 9
     }
   ]
 }
